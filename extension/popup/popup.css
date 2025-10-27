@@ -1,0 +1,32 @@
+body {
+  width: 320px;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #eee;
+  margin: 0;
+  padding: 12px;
+}
+
+h2 {
+  text-align: center;
+  color: #76e5ff;
+}
+
+.section {
+  margin: 10px 0;
+  border-bottom: 1px solid #333;
+  padding-bottom: 8px;
+}
+
+.score {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.score.low { color: #ff4d4d; }
+.score.medium { color: #ffaa33; }
+.score.high { color: #7dff7d; }
+
+ul {
+  padding-left: 18px;
+}

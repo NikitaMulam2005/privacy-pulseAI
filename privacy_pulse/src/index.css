@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+:root{
+  --bg: #071024;
+  --card: rgba(255,255,255,0.03);
+  --glass: rgba(255,255,255,0.03);
+  --neon: #00F0D6;
+  --accent: #4CC3FF;
+  --danger: #FF5252;
+}
+
+html,body,#root {
+  height:100%;
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(76,195,255,0.03), transparent),
+              radial-gradient(800px 400px at 90% 90%, rgba(255,76,204,0.02), transparent),
+              var(--bg);
+  color: #e6eef8;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Custom strong neon glow headings */
+.neon-title {
+  text-shadow: 0 2px 18px rgba(76,195,255,0.12), 0 0 8px rgba(0,240,214,0.06);
+}
+
+/* subtle glass panels */
+.glass {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+  backdrop-filter: blur(6px);
+}
+
+/* small scrollbar tweaks */
+::-webkit-scrollbar { width:8px; height:8px; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.06); border-radius:8px; }
+
+@keyframes pulse-glow {
+  0%, 100% { filter: drop-shadow(0 0 10px rgba(139,92,246,0.5)); }
+  50% { filter: drop-shadow(0 0 20px rgba(236,72,153,0.6)); }
+}
+h1 {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
