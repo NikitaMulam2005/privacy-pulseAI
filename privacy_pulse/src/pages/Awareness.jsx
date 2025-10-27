@@ -12,7 +12,7 @@ export default function Awareness() {
   useEffect(() => {
     const fetchContent = async () => {
       try {
-        const res = await fetch("http://54.149.111.177/awareness/");
+        const res = await fetch("https://privacypulse-backend.onrender.com/awareness/");
         const json = await res.json();
         if (json.status === "success") {
           const data = json.data;

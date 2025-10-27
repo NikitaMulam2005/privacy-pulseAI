@@ -15,7 +15,7 @@ export default function Reports() {
   useEffect(() => {
     const fetchReports = async () => {
       try {
-        const res = await fetch("http://54.149.111.177/api/dashboard/history");
+        const res = await fetch("https://privacypulse-backend.onrender.com/api/dashboard/history");
         const data = await res.json();
 
         const formatted = data.map((doc) => ({

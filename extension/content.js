@@ -29,7 +29,7 @@
     console.log(`Using privacy policy URL: ${policyUrl}`);
 
     // Fetch backend AI summary
-    const backend = "http://54.149.111.177";
+    const backend = "https://privacypulse-backend.onrender.com";
     let summary = {};
     try {
       const res = await fetch(`${backend}/api/scan/`, {

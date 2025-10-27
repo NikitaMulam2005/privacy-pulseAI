@@ -23,7 +23,7 @@ export default function Home() {
   });
 
   useEffect(() => {
-    fetch("http://54.149.111.177/api/dashboard/history")
+    fetch("https://privacypulse-backend.onrender.com/api/dashboard/history")
       .then((res) => res.json())
       .then((data) => {
         const arrData = Array.isArray(data) ? data : [data];

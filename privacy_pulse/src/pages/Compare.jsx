@@ -12,7 +12,7 @@ export default function Compare() {
 
   const fetchSiteData = async (url, setter) => {
     try {
-      const res = await fetch("http://54.149.111.177/api/scan/", {
+      const res = await fetch("https://privacypulse-backend.onrender.com/api/scan/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url })

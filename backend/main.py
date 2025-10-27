@@ -26,11 +26,17 @@ app = FastAPI(title="PrivacyPulse AI")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://54.149.111.177","chrome-extension://*"],
+    allow_origins=[
+        "https://privacypulse-backend.onrender.com",
+        "chrome-extension://*",
+        "http://localhost:5173",
+        "*",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 app.include_router(scan.router, prefix="/api/scan", tags=["scan"])
 app.include_router(dashboard.router, prefix="/api/dashboard", tags=["dashboard"])

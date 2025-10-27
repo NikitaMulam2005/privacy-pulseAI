@@ -23,7 +23,7 @@ def process_policy(policy_text: str) -> dict:
     payload = {
         "prompt": prompt,
         "text": policy_text,
-        "max_tokens": 2500  # Increased from 2000
+        "max_tokens": 3500  # Increased from 2000
     }
 
     try:
