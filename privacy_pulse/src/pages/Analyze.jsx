@@ -186,7 +186,7 @@ export default function Analyze() {
               ...prev,
               summary: cleanRepetitiveText(accumulated),
             }));
-            setWarning("⚠️ Received incomplete or malformed JSON. Displaying cleaned text.");
+            setWarning("Received incomplete or malformed JSON. Displaying cleaned text.");
           }
         }
       } else {
@@ -197,7 +197,7 @@ export default function Analyze() {
           summary: cleanedText,
         }));
         if (!cleanedText.endsWith(".")) {
-          setWarning("⚠️ Response appears incomplete.");
+          setWarning("Response appears incomplete.");
         }
       }
     } catch (err) {
@@ -211,7 +211,7 @@ export default function Analyze() {
         tone: "unknown",
         risks: [],
       });
-      setWarning("⚠️ An error occurred while fetching scan results.");
+      setWarning(" An error occurred while fetching scan results.");
     } finally {
       setRunning(false);
     }

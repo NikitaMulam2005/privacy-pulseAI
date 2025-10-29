@@ -7,9 +7,9 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 try:
     model = joblib.load("models/transparency_model.pkl")
     vectorizer = joblib.load("models/vectorizer.pkl")
-    print("✅ Loaded trained model and vectorizer.")
+    print("Loaded trained model and vectorizer.")
 except Exception:
-    print("⚠️ No trained model found. Using fallback scoring system.")
+    print("No trained model found. Using fallback scoring system.")
     model = None
     vectorizer = None
 
