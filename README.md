@@ -1,29 +1,22 @@
-🏛️ PrivacyPulse AI — Web Safety & Transparency Companion
+# 🏛️ PrivacyPulse AI 
 
-“Understand Before You Accept.”
-Built by Nikita Mulam for the Chrome Built-In AI Challenge 2025
+**“Understand Before You Accept.”**  
+*Built by Nikita Mulam for the Google Chrome Built-In AI Challenge 2025*
 
-🔍 Overview
 
-In an era where websites constantly collect and process user data, PrivacyPulse AI empowers users to analyze, summarize, and evaluate website privacy policies before accepting them.
-This system integrates a Chrome Extension and a Web Platform, backed by an AI-powered backend that provides real-time privacy risk analysis.
+---
 
-🧠 Key Features
+**PrivacyPulse AI** is an intelligent web platform that **analyzes and summarizes privacy policies in real time**.  
+It combines a **Chrome Extension** and **Web Portal**, powered by **FastAPI**, **Gemini API**, and a **Random Forest model** to classify websites as **Safe / Neutral / Risky**.  
+Using **Playwright** automation, it extracts complex policy data and delivers **clear, concise insights** — empowering users to make informed decisions *before* accepting.
 
-🧩 Chrome Extension – Automatically detects and summarizes privacy policies on visited websites.
+---
 
-🌐 Web Portal – Allows users to manually scan any website URL.
+## 🧩 System Architecture
 
-⚙️ FastAPI Backend – Handles AI analysis and data storage.
+---
 
-🧠 Gemini API – Generates concise, user-friendly summaries of long privacy policies.
-
-🌾 Random Forest Classifier – Predicts website risk levels (Safe / Neutral / Risky) based on linguistic and structural features.
-
-📊 Dashboard – Displays detailed reports and historical privacy risk analysis.
-
-🎭 Playwright Integration – Automates policy extraction from complex webpages.
-
+```mermaid
 sequenceDiagram
     participant U as 👤 User
     participant CE as 🧩 Chrome Extension
@@ -56,7 +49,10 @@ sequenceDiagram
     UI->>DB: Fetch stored analyses
     DB-->>UI: Display risk reports and insights
 
-⚙️ Tech Stack
+```
+
+## ⚙️ Tech Stack
+
 | Layer           | Technology                          |
 | --------------- | ----------------------------------- |
 | Frontend        | HTML, CSS, JS, Chrome Extension API |
@@ -64,42 +60,50 @@ sequenceDiagram
 | AI Layer        | Gemini API + Random Forest Model    |
 | Web Scraping    | Playwright                          |
 | Database        | MongoDB                             |
-| Hosting         | Render / Vercel / Local Testing     |
+| Hosting         | Render /  Local Testing     |
 | Version Control | Git + GitHub                        |
 
-🧪 Installation & Setup
 
-1️⃣ Clone the Repository
+## 🧪 Installation & Setup
 
-git clone https://github.com/<your-username>/PrivacyPulseAI.git
+### 1. Clone the Repository
+```bash
+git clone https://github.com/NikitaMulam2005/PrivacyPulseAI.git
+```
 
-2️⃣ Backend Setup
+### 2. Backend Setup
+```bash
 cd backend
 pip install -r requirements.txt
-uvicorn main:app --reload
+cd ..
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+```
 
-3️⃣ (Extension) Setup
+### 3️. Extension Setup
 
-Go to Chrome → Extensions → Manage Extensions → Load unpacked
-Select the extension/ folder inside the project.
-Open any website to see the privacy popup appear.
+1. Open **Chrome** → **Extensions** → **Manage Extensions**  
+2. Enable **Developer mode** (toggle in the top-right)  
+3. Click **"Load unpacked"**  
+4. Select the `extension/` folder inside the project  
 
-4️⃣ Web Portal
+> **Test it:** Visit any website — the **privacy summary popup** will appear automatically!
 
+### 4. Web Portal
+Run the frontend (if separate React/Vite app):
+
+```bash
 npm install
 npm start
+```
 
-🧪 Testing the Application
+## 🧪 Testing the Application
+1. Launch the FastAPI backend.  
+2. Load the Chrome Extension in your browser.  
+3. Visit any website with a visible privacy policy.  
+4. You’ll see a real-time summary popup.  
+5. Optionally, open the web portal and paste any URL to view full analysis and reports.
 
-Launch the FastAPI backend.
-Load the Chrome Extension in your browser.
-Visit any website with a visible privacy policy.
-You’ll see a real-time summary popup.
-Optionally, open the web portal and paste any URL to view full analysis and reports.
+## 🚀 Live Demo
 
-
-🚀 Live Demo
-
-🧩 Demo Video: [Add YouTube or Drive link]
-🌐 Web Portal: https://privacypulse-frontend.onrender.com/
-
+🧩 **Chrome Extension (Demo Video):** [Watch Demo](https://www.youtube.com/watch?v=abc123)  
+🌐 **Web Portal:** [Try It Live](https://privacypulse-frontend.onrender.com/)
