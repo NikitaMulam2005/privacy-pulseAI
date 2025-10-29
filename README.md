@@ -103,6 +103,11 @@ npm start
 4. You’ll see a real-time summary popup.  
 5. Optionally, open the web portal and paste any URL to view full analysis and reports.
 
+## 🪪 License
+
+This project is licensed under the **MIT License**.  
+See the [LICENSE](LICENSE) file for details.
+
 ## 🚀 Live Demo
 
 🧩 **Chrome Extension (Demo Video):** [Watch Demo](https://www.youtube.com/watch?v=abc123)  
