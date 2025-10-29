@@ -110,5 +110,5 @@ See the [LICENSE](LICENSE) file for details.
 
 ## 🚀 Live Demo
 
-🧩 **Chrome Extension (Demo Video):** [Watch Demo](https://www.youtube.com/watch?v=abc123)  
+🧩 **Demo Video:** [Watch Demo](https://www.youtube.com/watch?v=abc123)  
 🌐 **Web Portal:** [Try It Live](https://privacypulse-frontend.onrender.com/)
